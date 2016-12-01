@@ -57,7 +57,7 @@ Channel ID: xxxxxxxx
 ```
 
 **Use the Portal to Perform a Discovery:**
-[Discovery](#discovery) See below to learn how to perform a discovery
+* [Discovery](#discovery) See below to learn how to perform a discovery
 
 ## Local Python Installation<a name="opt2"></a>
 
@@ -104,7 +104,7 @@ python ./CHROnIC_Portal/main.py [TODO: Currently, these all run on port 5000. Th
 ```
 
 **Use the Portal to Perform a Discovery:**
-[Discovery](#discovery) See below to learn how to perform a discovery
+* [Discovery](#discovery) See below to learn how to perform a discovery
 
 # Discovery<a name="discovery"></a>
 * Access http://127.0.0.1:5002 from your browser
