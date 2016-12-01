@@ -83,7 +83,7 @@ git clone https://github.com/imapex/CHROnIC_Portal
 ```
 virtualenv chronic
 source chronic/bin/activate
-pip install -r requirements.txt [TODO: Which requirements.txt?]
+pip install -r requirements.txt [_TODO: Which requirements.txt?_]
 ```
 
 **Set environment variables**
@@ -97,10 +97,10 @@ export HCL=http://ucshcltool.cloudapps.cisco.com/public/rest
 
 **Execute the apps:**
 ```
-python ./CHROnIC_Bus/app.py [TODO: Currently, these all run on port 5000. The code can be manually changed to correct this.]
+python ./CHROnIC_Bus/app.py [_TODO: Currently, these all run on port 5000. The code can be manually changed to correct this._]
 python ./CHROnIC_Collector/app.py
-python ./CHROnIC_UCS_ESX_analyzer/main.py [TODO: Currently, these all run on port 5000. The code can be manually changed to correct this.]
-python ./CHROnIC_Portal/main.py[TODO: Currently, these all run on port 5000. The code can be manually changed to correct this.]
+python ./CHROnIC_UCS_ESX_analyzer/main.py [_TODO: Currently, these all run on port 5000. The code can be manually changed to correct this._]
+python ./CHROnIC_Portal/main.py[_TODO: Currently, these all run on port 5000. The code can be manually changed to correct this._]
 ```
 
 **Use the Portal to Perform a Discovery:**
