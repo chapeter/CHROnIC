@@ -57,6 +57,56 @@ Channel ID: xxxxxxxx
 ```
 
 **Use the Portal to Perform a Discovery:**
+[Discovery](#discovery) See below to learn how to perform a discovery
+
+## Local Python Installation<a name="opt2"></a>
+
+**Prerequisites:**
+The following components are required to locally run this project:
+* [Python 3.5](http://docs.python-guide.org/en/latest/starting/install/osx/) - Install via homebrew recommended if on a Mac
+* git - Part of the Xcode Command Line Tools
+* [pip](https://pip.pypa.io/en/stable/installing/)
+* [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
+
+**Get the code:**
+The latest builds of this project are available on Github:
+```
+mkdir ~/chronic
+cd ~/chronic
+git clone https://github.com/imapex/CHROnIC_Bus
+git clone https://github.com/imapex/CHROnIC_Collector
+git clone https://github.com/imapex/CHROnIC_UCS_ESX_analyzer
+git clone https://github.com/imapex/CHROnIC_Portal
+```
+
+**Set up virtual environment and PIP:**
+```
+virtualenv chronic
+source chronic/bin/activate
+pip install -r requirements.txt [TODO: Which requirements.txt?]
+```
+
+**Set environment variables**
+```
+export chronicbus=127.0.0.1:5000
+export CHRONICBUS=http://127.0.0.1:5000
+export CHRONICUCS=http://127.0.0.1:5001
+export CHRONICPORTAL=http://127.0.0.1:5002
+export HCL=http://ucshcltool.cloudapps.cisco.com/public/rest
+```
+
+**Execute the apps:**
+```
+python ./CHROnIC_Bus/app.py [TODO: Currently, these all run on port 5000. The code can be manually changed to correct this.]
+python ./CHROnIC_Collector/app.py
+python ./CHROnIC_UCS_ESX_analyzer/main.py [TODO: Currently, these all run on port 5000. The code can be manually changed to correct this.]
+python ./CHROnIC_Portal/main.py[TODO: Currently, these all run on port 5000. The code can be manually changed to correct this.]
+```
+
+**Use the Portal to Perform a Discovery:**
+[Discovery](#discovery) See below to learn how to perform a discovery
+
+# Discovery<a name="discovery"></a>
 * Access http://127.0.0.1:5002 from your browser
 ![](images/portal1.png)
 * Click "New Health Check Job"
