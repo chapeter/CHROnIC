@@ -16,6 +16,8 @@ This is an application designed to interact with infrastructure components, and 
 
 Contributors - Josh Anderson, Chad Peterson, Loy Evans
 
+![](images/chronic.png)
+
 # Installation
 The recommended installation process is to first deploy the Bus, then the Collector, then the UCS ESX Analyzer, and finally the Portal.
 
