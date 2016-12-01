@@ -108,14 +108,14 @@ python ./CHROnIC_Portal/main.py[TODO: Currently, these all run on port 5000. The
 
 # Discovery<a name="discovery"></a>
 * Access http://127.0.0.1:5002 from your browser
-![](images/portal1.png)
 * Click "New Health Check Job"
-![](images/portal2.png)
+![](images/portal1.png)
 * Enter the IP/Hostname, Username and Password for your UCS Manager
 * Enter the IP/Hostname, Username and Password for your vCenter
 * Enter the Channel ID found in the logs above
 * Click Submit
-![](images/portal3.png)
+![](images/portal2.png)
 * You will now be taken to the jobs page. It will take several minutes to collect the relevant information from your UCS Manager, vCenter and vSphere hosts. Refresh the page to view the current status. When complete, a report will be visible in the top section of the jobs page.
-![](images/portal4.png)
+![](images/portal3.png)
 * Click the report link to view the report. The report will show you the information about the servers it discovered, and show you whether they are Supported or Unsupported according to the HCL.
+![](images/portal4.png)
