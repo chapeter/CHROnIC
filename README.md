@@ -53,7 +53,7 @@ Check Bus: http://chronicbus:5000/api/get/cSzyGtq9
 In our example channel ID is cSzyGtq9
 
 
-Navigate to the portal and submit a new job with channel id of cSzyGtq9
+Navigate to [http://localhost](http://localhost) and submit a new job with channel id of cSzyGtq9
 
 Clean up
 ```
