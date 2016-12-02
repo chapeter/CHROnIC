@@ -55,8 +55,11 @@ In our example channel ID is cSzyGtq9
 
 Navigate to the portal and submit a new job with channel id of cSzyGtq9
 
-
-
+Clean up
+```
+docker kill $(docker ps -q)
+docker rm $(docker ps -a -q)
+```
 
 
 
