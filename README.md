@@ -40,8 +40,8 @@ Run the Following containers locally in this order
 ```
 docker run -d -p 5000:5000 chronic_bus
 docker run -d -p 5001:5000 -e chronicbus=localhost:5000 chronic_collector
-docker run -d -p 5002:5000 -e CHRONICBUS=localhost:5000 -e CHRONICPORTAL=http://localhost:5002 -e CHRONICUCS=http://localhost:5003 chronic_portal
-docker run -d -p 5003:5000 -e CHRONICBUS=localhost:5000 -e CHRONICPORTAL=http://localhost:5002 -e HCL=http://ucshcltool.cloudapps.cisco.com/public/rest chronic_ucs_esx_analyzer
+docker run -d -p 80:5000 -e CHRONICBUS=localhost:5000 -e CHRONICPORTAL=http://localhost:80 -e CHRONICUCS=http://localhost:5003 chronic_portal
+docker run -d -p 5003:5000 -e CHRONICBUS=localhost:5000 -e CHRONICPORTAL=http://localhost:80 -e HCL=http://ucshcltool.cloudapps.cisco.com/public/rest chronic_ucs_esx_analyzer
 ```
 
 
