@@ -47,7 +47,7 @@ docker run -d -p 80:5000 -e CHRONICBUS=http://chronicbus:5000 --link chronic_bus
 
 Get the collector's ID:
 ```
-docker logs chronic_bus
+docker logs chronic_collector
 Check Bus: http://chronicbus:5000/api/get/cSzyGtq9
 ```
 In our example channel ID is cSzyGtq9
