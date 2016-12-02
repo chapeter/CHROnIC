@@ -20,7 +20,7 @@ Contributors - Josh Anderson, Chad Peterson, Loy Evans
 ![](images/chronic.png)
 
 # Demo Install
-## Local Docker
+## Local Docker Builds
 * Install Docker for Mac or Docker for Windows
 
 Download Repos and build base containers
@@ -38,12 +38,22 @@ docker build -t chronic_ucs_esx_analyzer CHROnIC_UCS_ESX_analyzer/.
 
 Run the Following containers locally in this order
 ```
-docker run -d -p 5000:5000 chronic_bus
-docker run -d -p 5001:5000 -e chronicbus=localhost:5000 chronic_collector
-docker run -d -p 80:5000 -e CHRONICBUS=localhost:5000 -e CHRONICPORTAL=http://localhost:80 -e CHRONICUCS=http://localhost:5003 chronic_portal
-docker run -d -p 5003:5000 -e CHRONICBUS=localhost:5000 -e CHRONICPORTAL=http://localhost:80 -e HCL=http://ucshcltool.cloudapps.cisco.com/public/rest chronic_ucs_esx_analyzer
+docker run -d -p 5000:5000 --name chronic_bus chronic_bus
+docker run -d -p 5001:5000 -e chronicbus=chronicbus:5000 --link chronic_bus:chronicbus --name chronic_collector chronic_collector
+docker run -d -p 5003:5000 -e CHRONICBUS=chronicbus:5000 --link chronic_bus:chronicbus -e  HCL=http://ucshcltool.cloudapps.cisco.com/public/rest -e CHRONICPORTAL=http://localhost:80 --name chronic_ucs_esx_analyzer chronic_ucs_esx_analyzer
+docker run -d -p 80:5000 -e CHRONICBUS=http://chronicbus:5000 --link chronic_bus:chronicbus -e CHRONICPORTAL=http://localhost:80 -e CHRONICUCS=http://localhost:5003 --name chronic_portal chronic_portal
+
 ```
 
+Get the collector's ID:
+```
+docker logs chronic_bus
+Check Bus: http://chronicbus:5000/api/get/cSzyGtq9
+```
+In our example channel ID is cSzyGtq9
+
+
+Navigate to the portal and submit a new job with channel id of cSzyGtq9
 
 
 
