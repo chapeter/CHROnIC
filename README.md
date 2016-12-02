@@ -1,6 +1,6 @@
 # CHROnIC
 ![logo](images/CHROnIC_logo_med.png)
-##**Cisco Health Report & ONline Information Collector**
+##**Cisco Health Report & Online Information Collector**
 This is an application designed to interact with infrastructure components, and perform an online analysis of them.
 
 *The Challenge* - It can be tedious to collect the data needed for routine health analysis. For example, Cisco provides a HCL interface that can be used to verify whether a specific UCS hardware/software/driver configuration is fully supported. Multiple touch points are required across multiple different interfaces in order to verify this information:
